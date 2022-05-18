@@ -1,0 +1,16 @@
+<div class="h-12 bg-slate-100 flex items-center justify-between">
+  <div>
+    <%= link_to "Simple Airbnb", flats_path, class: "ml-4 text-lg" %>
+  </div>
+  <div class="flex items-center">
+    <%= form_tag flats_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], autocomplete: "off", class: "rounded", placeholder: "Explore..." %>
+      <%= submit_tag "Search", class: ""  %>
+    <% end %>
+    <%= link_to flats_path, class:"ml-3" do %>
+      <div>
+        Add Flat
+      </div>
+    <% end %>
+  </div>
+</div>
